@@ -1,0 +1,187 @@
+retval 返回值
+implement 实施
+optionally 随意地
+logical 符合逻辑的; 逻辑（上）的;
+execute 执行
+determines 决定
+initial 最初的，开始的
+stack 堆 
+executable 可执行的
+variable to be passed 要传递的变量
+reserve 储备
+invalid 无效
+megabyte 兆字节
+queues 队列
+attempt 进攻，尝试
+routine 常规
+CRT(C/C++ Runtime Library)是支持C/C++运行的一系列函数和代码的总称
+gracefully 优雅地;优美地;
+modify 修改
+division 除法
+multiplication 乘法
+integer 整数
+implement 实施，执行
+console 控制台
+convert 转换
+upper case 大写
+allocated 分配
+conversion  转换
+Destination 目的终点
+component 成分; 组分; 零件;要素;adj.	成分的; 组成的; 合成的; 构成的;
+delimiters 分隔符
+module 模块 组件
+Attributes 属性
+Merge 融入; （使） 混合; 相融
+emulates 模拟
+not case sensitive不区分大小写
+stretch 伸展，延伸
+Compatible 兼容
+transparent 透明的
+measure 测量
+Terminate 结束，解雇
+erase 清除，擦掉
+abort 中止计划，流产
+Inform 通知
+subsequent 随后的，后来的
+encapsulate 封装
+margin 边缘，极限，利润
+Alternatively 要不然
+polygonal 多边形的
+neutral 中立的
+Folder 文件夹
+dimensions 尺寸 规模 重要性
+emitted 发出
+interact 互动 相相互影响
+label 标签
+interpreted 解释
+stretch 延伸 持续
+precisely 精确地 严谨地
+sufficient 足够的 充足的
+instantiate 实例化
+elapsed消逝，过去（时间）
+manipulating 操控
+calendar 日历
+precision 精确的 精确度
+configured 配置
+radius 半径
+component 成分 组成
+cyan 青色 蓝绿色
+grabs 试图抓取
+propagated 繁衍 传播
+column 专栏，列
+item 项目条款
+Variant 变体 转化
+forbid 禁止
+visualize 可视化
+determine 判定
+arbitrary 随意的 武断的
+zoom in 放大
+zoom 急速上升 翁翁作响
+foundation 基础
+custom 定制的
+geometry 几何学 
+collision （碰撞）detection 碰撞检测
+implementation 贯彻 实施
+interaction 相互 合作
+collide 碰撞
+phase 阶段	
+Animation 动画
+transition 过渡 转变
+ownership 所有权 所有
+periodically 定期地 偶尔
+duration 持续 期间
+emitting 发出 放出
+interval 间隔 区间
+Loop 回路 圈
+Rotation 旋转 轮流
+multiple 多重的 复杂的
+Subsequently 随后 其后
+assumed 假定的 假装的
+snippet 片段
+duplicate 重复 复制 副本
+transaction 交易 办理 业务
+precision 精确度 准确的
+role 作用 角色
+Submit 提交 顺从 服从
+manual 用手的 
+trigger 触发 
+transaction 交易 事务
+commit 犯罪 承诺
+revert 恢复 重提 归属
+ascending 上升 向上的
+descending 下降 递减
+truncate 缩短
+instruction 指令
+append 附加 添加
+implementation 贯彻 成就
+gather 收集 采集 聚集
+parse 解析
+fatal 致命的 严重的
+emitted 发射
+expected 预期 预料
+texture 质地;结构;本质
+dimensions 面积
+instantiated 实例化
+animation 动画
+Axis（axes） 轴
+Duration 持续时间
+Curve 弧线
+Reimplement 重新实现
+intercept 截止
+grab 抢先 抓取
+legend 图例;铭文 传说
+alignment 对齐
+hue 色彩 色调
+saturation 饱和度
+perception 知觉 感知
+canonical 规范 权威的
+Focusable 可调焦
+Bold 粗体字 明显的 勇敢的
+plain 平原 朴实无华的东西 清楚的
+capability 能力 性能
+latency 延迟 潜在的
+compress 压缩
+categorize 把...分类 
+quite 非常 相对
+fetch 使发出 取来 
+intended 预期的 有意的 打算
+populated 定居于 密集的
+split 分裂;分开;
+Arguments 争论
+channel 渠道 海峡 引导 途径
+recursively 递归地
+reenter 重返，重新输入
+segment 分段 部分
+proxy 代理服务器  委托书 代理人
+guarded 谨慎的 保护 控制
+multiple 多重的 多个的 复杂的 certain 必然的 已确定的 
+acquire 学到 获得 取得
+configuration 配置
+trivial  琐碎的 无价值的 不重要的
+authentication 认证
+trimmed 平衡的 修剪 装饰
+tolerant 宽容的 容忍的
+conformance 顺应 一致
+conform 符合 遵照
+slash 斜线
+delegate 代表
+decoration 装饰
+orientation 方向 定位  排列方向
+emulate 仿真
+Primitive原始的 落后的
+navigation 航行
+Documentation 文档
+infinite 无穷的
+unique 独一无二的 独特的
+fragment 碎片 破碎 分段
+relevance 相关性，实用性
+striped 有条纹的 喝醉了的
+condensed 变稠的 浓缩
+pending 直到 在等待...期间 未解决的，未定的
+fulfilled 满足的
+righteous  正义的；正直的；公正的
+in the vast majority of cases 在大多数情况下
+constrains 约束
+inhibit 禁止 抑制
+explicitly 明确地
+invert 使颠倒 使反转

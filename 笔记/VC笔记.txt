@@ -1,0 +1,92 @@
+1.响应OnCreate函数时父窗口已经创建完成了，子窗口未创建
+  响应OnInitDialog函数时所有窗口都创建完成。
+2.控件关联变量是在CDilog::OnInitDlog()中与控件关联在一起的(OnInitDialog()中调用UpdataData函数UpdataData中调用DoDataExchange)
+3.BMP文件编码
+由4部分组成，分别是位图文件头、位图信息头、调色板和图像数据.
+1)位图文件头（bitmap-file header）(BITMAPFILEHEADER 结构体)
+包含了图像类型、图像大小、图像数据存放地址和两个保留未使用的字段.
+2）位图信息头（bitmap-information header）BITMAPINFOHEADER
+包含了位图信息头的大小、图像的宽高、图像的色深、压缩说明图像数据的大小和其他一些参数。
+BITMAPFILEHEADER{
+		bfType(WORD)      ( 4D 42 BM)
+		bfSize(DWORD)	  (位图大小，占多少字节）	
+		bfReserved1(WORD) (00 00)
+		bfReserved2(WORD) (00 00)
+		bfOffBits(DWORD)  (图像数据的地址，即文件头+信息头+调色板的长度)		
+		}
+BITMAPINFOHEADER{
+		biSize 		(DWORD) (00 00 00 28总是)
+		biWidth		(DWORD) (图像宽度，单位像素)
+		biHeight	(DWORD) (图像高度，单位像素))
+		biPlanes	(WORD)	(总是 00 01)
+		biBitCount	(WORD)  (图像的色深 00 08即2的8次幂=256色)
+		biCompression	(DWORD) (压缩方式 0表示不压缩) 
+		biSizeImage	(DWORD) (图像数据大小=位图大小-54字节（文件头+信息头+调色板的长度占用的字节数）)
+		biXPelsPerMeter	(DWORD) (3780图像的水平分辨率，单位像素/m)
+		biYPelsPerMeter	(DWORD)	(3780图像的垂直分辨率，单位像素/m)
+		biClrUsed	(DWORD) (图像使用的颜色数，0表示使用全部颜色)
+		biClrImportant	(DWORD) (图像中重要的颜色数，0表示所有颜色都重要)
+		}
+4.DrawEdge 用来画边界，可以画按钮框
+5.OnNcHitTest(CPoint point)(窗口只有Client区域时，移动窗口)
+{
+	UINT nHitTest=CDialog::OnNcHitTest(point);
+	if(nHitTest==HTCLIENT)
+		nHitstTest=HTCAPTION
+	return nHitTest;
+}
+6.程序托盘显示
+void CTimerDlg::OnTUOPAN()
+{	//NOTIFYICONDATA m_nid;
+	m_nid.cbSize=(DWORD)sizeof(NOTIFYICONDATA);
+	m_nid.hWnd=m_hWnd;
+	m_nid.uID=IDR_MAINFRAME;
+	m_nid.uFlags=NIF_ICON|NIF_MESSAGE|NIF_TIP;
+	m_nid.uCallbackMessage=WM_SHOWTASK;
+	m_nid.hIcon=LoadIcon(AfxGetInstanceHandle(),MAKEINTRESOURCE(IDR_MAINFRAME));
+	strcpy(m_nid.szTip,"老王牌定时器");
+	Shell_NotifyIcon(NIM_ADD,&m_nid);
+
+	
+}
+LRESULT CTimerDlg::OnShowTask(WPARAM wParam,LPARAM lParam)
+{
+	switch(lParam)
+	{
+	case WM_LBUTTONDOWN:
+		
+		{
+			if(!::IsWindowVisible(m_hWnd))
+				::ShowWindow(m_hWnd,SW_NORMAL);
+			else
+				::ShowWindow(m_hWnd,SW_HIDE);
+			break;
+		}
+	case WM_RBUTTONDOWN:
+		{
+			LPPOINT lpt=new tagPOINT;
+			::GetCursorPos(lpt);
+			CMenu menu;
+			menu.CreatePopupMenu();
+			menu.AppendMenu(MF_STRING,WM_DESTROY,"关闭");
+			menu.AppendMenu(MF_STRING,WM_ABOUTDLG,"关于改进");
+			menu.TrackPopupMenu(TPM_LEFTALIGN,lpt->x,lpt->y,this);
+			HMENU hmenu=menu.Detach();
+			menu.DestroyMenu();
+			delete lpt;
+		}
+
+		break;
+
+/*******************************QT*********************************/
+1、accept()默认的功能，它会将对话框关闭并返回QDialog::Accepted标识 
+
+2、模型与视图：点击list选中某一行，应在View中实现对应处理函数：View-》selectionModel()->>currentIndex()->>row()或column();
+QStyle::drawControl(ControlElement element ,QStyleOption *option,QPainter*painter,QWidget *widget);
+第一个是一个 enum，用于指定要绘制哪个元素。这个 enum 在不同的 draw 函数中可能是不一样的。例如，在 drawControl() 中是 QStyle::ControlElement，指的是组件；在 drawPrimitive() 中则是 QStyle::PrimitiveElement，指的是组件的原始组成元素，例如焦点框，check box 的小勾等；
+第二个是 QStyleOption 对象指针。这个对象保存了 painter 绘制时所需要的所有数据信息，比如绘制大小、坐标、绘制文本等。不同的 element 可能对应着不同的 QStyleOption 的子类，这个在文档中可以找到；
+第三个是 QPainter 对象指针。系统即用这个 painter 进行绘制；
+第四个是 QWidget 对象指针，用于辅助绘制。
+回到代码，我们可以看到，在 drawControl() 函数的四个参数中，只有最后一个有默认值。也就是说，如果要调用这个函数，我们必须准备好参数数据。这就是在 paintEvent() 中，前面几行代码做在的工作
+
+3、QListView是基于Model，而QListWidget是基于Item。这是它们的本质区别(QListWidget是QListView的子类,)。
